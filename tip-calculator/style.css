@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+:root {
+    --main-text-color : hsl(183, 100%, 15%);
+    --second-color : hsl(185, 41%, 84%);
+    --third-color : hsl(189, 41%, 97%);
+    --fourth-color : hsl(172, 67%, 45%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--second-color);
+}
+
+.heading{
+    margin-top: -100px;
+    margin-bottom: 100px;
+    letter-spacing: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--main-text-color);
+}
+
+.container{
+    display:flex;
+    column-gap: 50px;
+    min-width: 1000px;
+    min-height: 500px;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.left-sec{
+    flex-basis: 50%;
+    width: 100%;
+    min-height: 100%;
+    border-radius: 20px;
+}
+
+form label{
+    color: var(--main-text-color);
+    font-weight: 700;
+    display: block;
+}
+form div{
+    position: relative;
+}
+form svg{
+    position: absolute;
+    top: 25%;
+    left: 10px;
+}
+form input{
+    width: 100%;
+    padding: 5px 10px 5px 30px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--main-text-color);
+    background-color: var(--third-color);
+    border: none;
+    outline-color: var(--fourth-color);
+}
+form input::placeholder{color: var(--second-color)}
+
+.tip{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 50px 0px;
+}
+.tip span{
+    grid-column: 1/4;
+    font-weight: 700;
+    color: var(--main-text-color);
+    margin-bottom: 2px;
+}
+.tip input{
+    display: block;
+    max-width: 141.67px;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: var(--third-color);
+    color: var(--main-text-color);
+    border: none;
+    border-radius: 5px;
+    outline-color: var(--fourth-color);
+}
+.tip input::placeholder{
+    text-align: center;
+}
+.tip button{
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: var(--main-text-color);
+    padding: 7px 0px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.tip button:hover{
+    background-color: var(--fourth-color);
+    color: var(--main-text-color)
+}
+
+
+.right-sec{
+    flex-basis: 50%;
+    border-radius: 20px;
+    background-color: var(--main-text-color);
+    padding: 60px 50px;
+}   
+
+.right-sec div{
+    display: flex;
+    justify-content: space-between;
+}
+pre{
+    white-space: pre-line;
+    color: #fff;
+}
+pre span{
+    font-size: 14px;
+    color: hsl(184, 14%, 56%)
+}
+
+.right-sec button{
+    width: 100%;
+    position: relative;
+    top: 65%;
+    padding: 5px 0;
+    font-size: 24px;
+    border: none;
+    color: var(--main-text-color);
+    background-color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.right-sec button:hover{
+    background-color: var(--fourth-color);
+}
+.right-sec .res-number{
+    color: var(--fourth-color);
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width:675px){
+    .heading{
+        margin: 0 auto 15px;
+    }
+    .container{
+        display:flex;
+        flex-direction: column;
+        row-gap: 50px;
+        min-width: 375px;
+        min-height: 500px;
+        border-radius: 20px;
+        padding: 30px;
+        background-color: hsl(0, 0%, 100%);
+    }
+}
